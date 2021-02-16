@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "locations",
+  "info": {
+    "name": "locations"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "location_code": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 4
+    },
+    "location_name": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 150
+    }
+  }
+}

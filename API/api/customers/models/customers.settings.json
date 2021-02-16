@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customers",
+  "info": {
+    "name": "customers",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "customer_name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 150
+    },
+    "contact_number": {
+      "type": "biginteger",
+      "required": true
+    },
+    "customer_address": {
+      "type": "component",
+      "repeatable": true,
+      "component": "address.address"
+    },
+    "vechicle_rentals": {
+      "collection": "vechicle-rentals",
+      "via": "customer"
+    }
+  }
+}

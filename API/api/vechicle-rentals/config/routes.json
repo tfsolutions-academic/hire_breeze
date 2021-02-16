@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/vechicle-rentals",
+      "handler": "vechicle-rentals.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/vechicle-rentals/count",
+      "handler": "vechicle-rentals.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/vechicle-rentals/:id",
+      "handler": "vechicle-rentals.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/vechicle-rentals",
+      "handler": "vechicle-rentals.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/vechicle-rentals/:id",
+      "handler": "vechicle-rentals.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/vechicle-rentals/:id",
+      "handler": "vechicle-rentals.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

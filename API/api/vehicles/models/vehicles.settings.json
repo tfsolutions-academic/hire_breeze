@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vehicles",
+  "info": {
+    "name": "vehicles",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "reg_number": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 12
+    },
+    "current_mileage": {
+      "type": "decimal"
+    },
+    "due_date": {
+      "type": "date",
+      "required": true
+    },
+    "engine_size": {
+      "type": "decimal",
+      "required": false
+    },
+    "vehicle_type": {
+      "type": "enumeration",
+      "enum": [
+        "Sedan",
+        "SUV",
+        "Luxury",
+        "Prime"
+      ]
+    },
+    "location": {
+      "model": "locations"
+    },
+    "vehicle_model": {
+      "model": "vehicle-models",
+      "via": "vehicles"
+    },
+    "vechicle_rentals": {
+      "collection": "vechicle-rentals",
+      "via": "vehicle"
+    }
+  }
+}
