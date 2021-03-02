@@ -34,7 +34,9 @@
         "Sedan",
         "SUV",
         "Luxury",
-        "Prime"
+        "Prime",
+        "Micro",
+        "Hatchback"
       ]
     },
     "location": {
